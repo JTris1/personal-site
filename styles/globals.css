@@ -35,28 +35,6 @@ body {
 }
 
 
-@keyframes typing {
-  from {width: 0}
-  to {width: 100%}
-}
-
-
-
-.slide-in {
-  animation: slide-in 200ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(100vw);
-  }
-  to {
-    transform: translateX(0vw);
-  }
-}
-
-
-
 .glitch {
   animation: glitch 1s linear infinite;
 }

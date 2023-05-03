@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
 
-function Divider({ width, height, color, darkColor }) {
+function SpaceDivider({ width, height, color, darkColor }) {
     /** Divider that uses a space ship. Must specify a width at minimum. If no height is supplied, it is calculated based on a scale of 4.5 (ex. width = 1440, height = (1440/4.5)) */
-    console.log(color);
     return (
-        <svg width={width + 'px'} height={(height ? height : width / 4.5) + 'px'} viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_1_4)">
                 <path d="M0 160L80 176C160 192 320 224 480 197.3C640 171 800 85 960 64C1120 43 1280 85 1360 106.7L1440 128V320H0V160Z" className={'fill-neutral-200 dark:fill-neutral-900'} />
                 <g clipPath="url(#clip1_1_4)" className={`animate-divider-on-scroll [animation-play-state:paused] [animation-delay:calc(var(--scroll)*-1s)]`}>
@@ -240,4 +239,4 @@ function Divider({ width, height, color, darkColor }) {
     )
 }
 
-export default Divider
+export default SpaceDivider

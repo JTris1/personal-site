@@ -15,6 +15,8 @@ module.exports = {
       },
       animation: {
         'divider-on-scroll': 'spaceship-on-scroll 1s linear infinite',
+        'slide-in': 'slide-in 200ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+        'slide-out': 'slide-in 200ms cubic-bezier(0.075, 0.82, 0.165, 1) reverse',
       },
       keyframes: {
         'spaceship-on-scroll': {
@@ -36,6 +38,10 @@ module.exports = {
           '94%': { transform: 'translate(94%, -18%) rotate(4deg)' },
           '100%': { transform: 'translate(100%, -10%) rotate(4deg)' },
         },
+        'slide-in': {
+          'from': { transform: 'translateX(100vw)' },
+          'to': { transform: 'translateX(0vw)' }
+        }
       },
       colors: {
         neutral: neutral

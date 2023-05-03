@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className='overflow-x-hidden' onScroll={() => { }}>
+      <body className='overflow-x-hidden'>
         <Main />
         <NextScript />
       </body>
