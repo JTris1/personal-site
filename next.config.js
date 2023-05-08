@@ -34,7 +34,7 @@ module.exports = {
 
   // ...other config
   images: {
-    loader: 'akamai'
+    unoptimized: true
   }
 }
 
