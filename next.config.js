@@ -33,6 +33,9 @@ module.exports = {
   },
 
   // ...other config
+  images: {
+    loader: 'akamai'
+  }
 }
 
 module.exports = nextConfig
