@@ -17,23 +17,23 @@ function About() {
 
                 <div className='flex flex-col items-center my-20'>
                     <h2 className='font-bold text-2xl underline underline-offset-4'>Development Skills</h2>
-                    <Skills img={<Desktop />} title={'Front End'} labels={[
+                    <Skills img={<Desktop className={`text-5xl mb-3`} />} title={'Front End'} labels={[
                         { name: 'React', img: <React className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
                         { name: 'Next.js', img: <Nextjs className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
                         { name: 'JavaScript', img: <Javascript className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
                         { name: 'TailwindCSS', img: <Tailwind className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
                         { name: 'JWT Auth', img: <Jwt className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> }
                     ]} />
-                    {/* <Skills img={Terminal} title={'Back End'} labels={[
-                        { name: 'Express', imgSrc: expressUrl },
-                        { name: 'Flask', imgSrc: flaskUrl }
+                    <Skills img={<Terminal className={`text-5xl mb-3`} />} title={'Back End'} labels={[
+                        { name: 'Express', img: <Express className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'Flask', img: <Flask className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> }
                     ]} />
-                    <Skills img={Data} title={'Database'} labels={[
-                        { name: 'MongoDB', imgSrc: <Mongodb /> },
-                        { name: 'MySQL', imgSrc: mysqlUrl },
-                        { name: 'Firestore', imgSrc: firebaseUrl },
-                        { name: 'BigQuery', imgSrc: gcloudUrl }
-                    ]} /> */}
+                    <Skills img={<Data className={`text-5xl mb-3`} />} title={'Database'} labels={[
+                        { name: 'MongoDB', img: <Mongodb className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'MySQL', img: <Mysql className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'Firestore', img: <Firebase className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'BigQuery', img: <Gcloud className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> }
+                    ]} />
                 </div>
 
                 <h2 className='font-bold text-2xl underline underline-offset-4 m-10'>Fun Stuff</h2>
