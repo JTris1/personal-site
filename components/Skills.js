@@ -10,7 +10,7 @@ function Skills({ title, imgSrc, imgAlt, labels, className, children }) {
             <div className='flex flex-wrap justify-center'>
                 {labels.map((l) => (
                     <Label key={l.name} className={'group flex'}>
-                        <p className='translate-x-3 transition-transform group-hover:translate-x-0 group-hover:font-bold'>{l.name}</p>
+                        <p className='translate-x-3 transition-transform group-hover:translate-x-0 group-hover:font-bold group-hover:text-blue-500'>{l.name}</p>
                         <Image src={l.imgSrc} alt={l.name} width={15} className={`h-auto ml-2 opacity-0 transition-opacity group-hover:block group-hover:opacity-100`} />
                     </Label>
                 ))}
