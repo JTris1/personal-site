@@ -18,7 +18,7 @@ function About({ }) {
                 <div className='flex flex-col items-center my-20'>
                     <h2 className='font-bold text-2xl underline underline-offset-4'>Development Skills</h2>
                     <Skills img={<Desktop className={`text-5xl mb-3`} />} title={'Front End'} labels={[
-                        { name: 'React', img: <React className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'React', img: <React className={`text-lg opacity-0 transition-opacity group-hover:opacity-100 group-hover:`} /> },
                         { name: 'Next.js', img: <Nextjs className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
                         { name: 'JavaScript', img: <Javascript className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
                         { name: 'TailwindCSS', img: <Tailwind className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
