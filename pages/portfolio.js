@@ -1,7 +1,7 @@
 import React from 'react'
 import AboutDivider from '~/components/AboutDivider'
 
-function Portfolio() {
+function Portfolio({ }) {
     return (
         <div id='portfolio' className='bg-neutral-200 dark:bg-neutral-900'>
             <AboutDivider />

@@ -2,14 +2,14 @@ import React, { useState, useRef } from 'react'
 import NavMenu from './NavMenu';
 import { CSSTransition } from 'react-transition-group';
 
-export default function Nav({ resetScroll, scrollTo, activeLink, setActiveLink }) {
+export default function Nav({ refProp, resetScroll, scrollTo, activeLink, setActiveLink }) {
     const [navOpened, setNavOpened] = useState(false);
     const [needToScroll, setNeedToScroll] = useState(false);
     const ref = useRef(null);
 
     return (
         <>
-            <div className='w-full h-16 flex justify-between items-center fixed backdrop-blur-md z-30'>
+            <div ref={refProp} className='w-full h-16 flex justify-between items-center fixed backdrop-blur-md z-30'>
                 <div className='w-[100px] h-[100px]'></div>
                 <Hamburger className='scale-50 cursor-pointer' navOpened={navOpened} setNavOpened={setNavOpened} />
             </div>

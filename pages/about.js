@@ -4,7 +4,7 @@ import SpaceDivider from '~/components/SpaceDivider'
 import Skills from '~/components/Skills'
 import { Data, Desktop, Express, Firebase, Flask, Gcloud, Javascript, Jwt, Mongodb, Mysql, Nextjs, React, Tailwind, Terminal } from '~/icons';
 
-function About() {
+function About({ }) {
     const router = useRouter();
 
     return (
