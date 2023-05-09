@@ -7,7 +7,7 @@ import About from './about';
 import Portfolio from './portfolio';
 import Links from './links';
 
-export default function Home({ scrolled, resetScroll, scrollTo, activeLink, setActiveLink }) {
+export default function Home({ refs, scrolled, resetScroll, scrollTo, links, setLinks }) {
   const [typewriterStoped, setTypewriterStopped] = useState(false);
 
   return (

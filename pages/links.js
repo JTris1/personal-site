@@ -1,7 +1,7 @@
 import React from 'react'
 import PortfolioDivider from '~/components/PortfolioDivider'
 
-function Links() {
+function Links({ }) {
     return (
         <div id='links' className='bg-neutral-300 dark:bg-neutral-900'>
             <PortfolioDivider />

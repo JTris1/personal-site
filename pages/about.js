@@ -1,24 +1,10 @@
-import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import SpaceDivider from '~/components/SpaceDivider'
 import Skills from '~/components/Skills'
-import desktopUrl from '~/icons/desktop.svg?url';
-import terminalUrl from '~/icons/terminal.svg?url';
-import dataUrl from '~/icons/data.svg?url';
-import reactUrl from '~/icons/react.svg?url';
-import javasriptUrl from '~/icons/javascript.svg?url';
-import firebaseUrl from '~/icons/firebase.svg?url';
-import flaskUrl from '~/icons/flask.svg?url';
-import gcloudUrl from '~/icons/gcloud.svg?url';
-import mongodbUrl from '~/icons/mongodb.svg?url';
-import nextjsUrl from '~/icons/nextjs.svg?url';
-import tailwindUrl from '~/icons/tailwind.svg?url';
-import jwtUrl from '~/icons/jwt.svg?url';
-import expressUrl from '~/icons/express.svg?url';
-import mysqlUrl from '~/icons/mysql.svg?url';
+import { Data, Desktop, Express, Firebase, Flask, Gcloud, Javascript, Jwt, Mongodb, Mysql, Nextjs, React, Tailwind, Terminal } from '~/icons';
 
-function About() {
+function About({ }) {
     const router = useRouter();
 
     return (
@@ -31,22 +17,22 @@ function About() {
 
                 <div className='flex flex-col items-center my-20'>
                     <h2 className='font-bold text-2xl underline underline-offset-4'>Development Skills</h2>
-                    <Skills imgSrc={desktopUrl} imgAlt={'Desktop Icon'} title={'Front End'} labels={[
-                        { name: 'React', imgSrc: reactUrl },
-                        { name: 'Next.js', imgSrc: nextjsUrl },
-                        { name: 'JavaScript', imgSrc: javasriptUrl },
-                        { name: 'TailwindCSS', imgSrc: tailwindUrl },
-                        { name: 'JWT Auth', imgSrc: jwtUrl }
+                    <Skills img={<Desktop className={`text-5xl mb-3`} />} title={'Front End'} labels={[
+                        { name: 'React', img: <React className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'Next.js', img: <Nextjs className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'JavaScript', img: <Javascript className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'TailwindCSS', img: <Tailwind className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'JWT Auth', img: <Jwt className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> }
                     ]} />
-                    <Skills imgSrc={terminalUrl} imgAlt={'Terminal Prompt Icon'} title={'Back End'} labels={[
-                        { name: 'Express', imgSrc: expressUrl },
-                        { name: 'Flask', imgSrc: flaskUrl }
+                    <Skills img={<Terminal className={`text-5xl mb-3`} />} title={'Back End'} labels={[
+                        { name: 'Express', img: <Express className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'Flask', img: <Flask className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> }
                     ]} />
-                    <Skills imgSrc={dataUrl} imgAlt={'Database Icon'} title={'Database'} labels={[
-                        { name: 'MongoDB', imgSrc: mongodbUrl },
-                        { name: 'MySQL', imgSrc: mysqlUrl },
-                        { name: 'Firestore', imgSrc: firebaseUrl },
-                        { name: 'BigQuery', imgSrc: gcloudUrl }
+                    <Skills img={<Data className={`text-5xl mb-3`} />} title={'Database'} labels={[
+                        { name: 'MongoDB', img: <Mongodb className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'MySQL', img: <Mysql className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'Firestore', img: <Firebase className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> },
+                        { name: 'BigQuery', img: <Gcloud className={`text-lg opacity-0 transition-opacity group-hover:opacity-100`} /> }
                     ]} />
                 </div>
 
