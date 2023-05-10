@@ -24,6 +24,17 @@
   }
 }
 
+@layer base {
+  h1 {
+    @apply text-3xl;
+    @apply font-sans;
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-sans;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

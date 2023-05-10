@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-jb-mono)', ...fontFamily.mono],
+        mono: ['var(--font-jb-mono)', ...fontFamily.mono],
+        sans: ['var(--font-inter)', ...fontFamily.sans],
       },
       animation: {
         'divider-on-scroll': 'spaceship-on-scroll 1s linear infinite',

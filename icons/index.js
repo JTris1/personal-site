@@ -1,5 +1,6 @@
 export { default as Data } from "./Data";
 export { default as Desktop } from "./Desktop";
+export { default as Envelope } from "./Envelope";
 export { default as Express } from "./Express";
 export { default as Firebase } from "./Firebase";
 export { default as Flask } from "./Flask";
@@ -12,3 +13,5 @@ export { default as Nextjs } from "./Nextjs";
 export { default as React } from "./React";
 export { default as Tailwind } from "./Tailwind";
 export { default as Terminal } from "./Terminal";
+export { default as ErrorCircle } from "./ErrorCircle";
+export { default as Copy } from "./Copy";

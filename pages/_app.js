@@ -1,10 +1,7 @@
 import '~/styles/globals.css'
-import localFont from 'next/font/local'
 import Nav from '~/components/Nav';
 import { useState, useEffect, useRef } from 'react';
-
-const jbMono = localFont({ src: '../fonts/JetBrainsMono[wght].ttf', variable: '--font-jb-mono' });
-
+import { jbMono, inter } from '~/components/fonts'
 
 export default function App({ Component, pageProps }) {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +25,12 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <main className={`${jbMono.className} font-mono h-full overflow-hidden relative`}>
+      <style jsx global> {`
+        html {
+          font-family: ${jbMono.style.fontFamily}
+        }
+      `}</style>
+      <main className={`${jbMono.variable} ${inter.variable} font-mono h-full overflow-hidden relative`}>
         <Nav />
         <Component {...pageProps} scrolled={scrolled} resetScroll={resetScroll} scrollTo={scrollTo} />
       </main>

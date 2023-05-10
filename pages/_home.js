@@ -8,7 +8,6 @@ import Expand from '~/icons/Expand';
 function Home({ scrolled, scrollTo }) {
     const [typewriterStoped, setTypewriterStopped] = useState(false);
 
-
     return (
         <div id="home" className='min-h-screen w-full p-8 flex'>
             <div className={`text-2xl w-full mt-[65%] relative`}>
@@ -22,7 +21,7 @@ function Home({ scrolled, scrollTo }) {
                         onInit={(typewriter) => {
                             typewriter
                                 .typeString('<span class="text-sm text-center">Hello, </span>')
-                                .typeString('<span class="text-sm">my name is</span><br/><span class="text-3xl font-bold">Johnathon Trisler</span>')
+                                .typeString('<span class="text-sm">my name is</span><br/><span class="text-3xl font-bold font-sans">Johnathon Trisler</span>')
                                 .start()
                                 .callFunction(() => setTypewriterStopped(true))
                         }}

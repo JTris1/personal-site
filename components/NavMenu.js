@@ -7,16 +7,11 @@ import { CSSTransition } from 'react-transition-group'
 function NavMenu({ innerRef, setNavOpened }) {
     const router = useRouter();
 
-    function handleClick(id) {
-        router.push('/', id, { shallow: true })
-    }
-
     return (
         <div ref={innerRef} className='transition-transform fixed w-full h-full bg-neutral-50 bg-opacity-75 backdrop-blur-3xl dark:bg-neutral-950 flex justify-center z-20'>
             <ul className='flex flex-col items-center h-fit mt-[60%]'>
                 <Link className={`mb-16 cursor-pointer hover:underline hover:underline-offset-4`}
                     activeClass={`font-bold`}
-                    // onSetActive={() => handleClick('/')}
                     smooth
                     duration={350}
                     spy
@@ -26,7 +21,6 @@ function NavMenu({ innerRef, setNavOpened }) {
                 </Link>
                 <Link className={`mb-16 cursor-pointer hover:underline hover:underline-offset-4`}
                     activeClass={`font-bold`}
-                    // onSetActive={() => handleClick('/about')}
                     smooth
                     duration={350}
                     offset={30}
@@ -37,25 +31,23 @@ function NavMenu({ innerRef, setNavOpened }) {
                 </Link>
                 <Link className={`mb-16 cursor-pointer hover:underline hover:underline-offset-4`}
                     activeClass={`font-bold`}
-                    // onSetActive={() => handleClick('/portfolio')}
                     smooth
                     duration={350}
                     offset={30}
                     spy
-                    to='portfolio'
+                    to='experience'
                 >
-                    <span className={`text-4xl`}>Portfolio</span>
+                    <span className={`text-4xl`}>Experience</span>
                 </Link>
                 <Link className={`mb-16 cursor-pointer hover:underline hover:underline-offset-4`}
                     activeClass={`font-bold`}
-                    // onSetActive={() => handleClick('/links')}
                     smooth
                     duration={350}
                     offset={30}
                     spy
-                    to='links'
+                    to='contact'
                 >
-                    <span className={`text-4xl`}>Links</span>
+                    <span className={`text-4xl`}>Contact</span>
                 </Link>
             </ul>
         </div>
