@@ -6,29 +6,25 @@ import Contact from './_contact';
 import Expand from '~/icons/Expand';
 import { ErrorCircle, Close } from '~/icons';
 import { Toaster, ToastBar, toast } from 'react-hot-toast';
+import Notification from '~/components/Notification';
 
 
 export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, setLinks }) {
 
   useEffect(() => {
-    toast('This site is functional, but it is undergoing some overhauls!', {
-      duration: 4000,
-      icon: <ErrorCircle className={`fill-amber-500 text-2xl`} />,
-      position: 'top-left',
-      id: 'renovations'
-    })
+    Notification({ text: 'This site is functional, but it is undergoing some overhauls!', duration: 4000, id: 'renovations', position: 'top-left', icon: <ErrorCircle className={`fill-amber-500 text-2xl`} /> })
   }, [])
 
   return (
     <main className={`flex flex-col min-h-screen justify-between`}>
-      <Toaster toastOptions={{ id: 'renovations' }}>
+      <Toaster toastOptions={{ className: 'toaster' }}>
         {(t) => (
           <ToastBar toast={t}>
             {({ icon, message }) => (
               <div className='flex'>
                 <span className='self-center'>{icon}</span>
                 <span className='font-sans text-sm'>{message}</span>
-                <button className='h-fit text-3xl self-center' onClick={() => toast.dismiss(t.id)}><Close /></button>
+                <button className='self-center text-3xl h-fit' onClick={() => toast.dismiss(t.id)}><Close /></button>
               </div>
             )}
           </ToastBar>

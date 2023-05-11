@@ -8,7 +8,7 @@ function NavMenu({ innerRef, setNavOpened }) {
     const router = useRouter();
 
     return (
-        <div ref={innerRef} className='transition-transform fixed w-full h-full bg-neutral-50 bg-opacity-75 backdrop-blur-3xl dark:bg-neutral-950 flex justify-center z-20'>
+        <div ref={innerRef} className='fixed z-20 flex justify-center w-full h-full transition-transform bg-opacity-75 bg-neutral-50 backdrop-blur-3xl dark:bg-neutral-950'>
             <ul className='flex flex-col items-center h-fit mt-[60%]'>
                 <Link className={`mb-16 cursor-pointer hover:underline hover:underline-offset-4`}
                     activeClass={`font-bold`}

@@ -35,6 +35,12 @@
   }
 }
 
+@layer components {
+  .toaster {
+    background-color: red;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -44,7 +50,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
 
 .glitch {
   animation: glitch 1s linear infinite;

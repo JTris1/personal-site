@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "svgr": "svgr --icon --ignore-existing --title-prop -d icons icons"
+    "svgr": "svgr --icon --ignore-existing --title-prop --replace-attr-values '#000000=currentColor' -d icons/svg icons"
   },
   "dependencies": {
     "@radix-ui/react-form": "0.0.2",
