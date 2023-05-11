@@ -5,7 +5,7 @@ import TextLabel from '~/components/TextLabel'
 function Experience({ scrollTo }) {
     return (
         <div className='flex flex-col items-center w-screen bg-neutral-100 dark:bg-neutral-800'>
-            <div className='max-w-screen-xl'>
+            <div className='flex flex-col items-center max-w-screen-xl'>
                 <div className='flex flex-col items-center px-6 py-20'>
                     <h1 className='mb-32 font-sans text-4xl font-bold'>About Me</h1>
                     <h1 className='text-3xl font-bold'>Education</h1>
@@ -20,7 +20,7 @@ function Experience({ scrollTo }) {
 
                             </div>
                             <div>
-                                <ul className='list-disc list-inside'>
+                                <ul className='px-5 list-disc'>
                                     <li className='my-3'>Learned all about differnet forms of technology, like databases, cybersecurity, networking, and web development.</li>
                                     <li className='my-3'>Gained exposure and experience with many different languages, such as Java, Python, Kotlin, and more.</li>
                                     <li className='my-3'>Learned useful career skills, including Project Management, Statistics, UI/UX, and more.</li>
@@ -31,7 +31,7 @@ function Experience({ scrollTo }) {
                 </div>
 
 
-                <Seperator.Root orientation='horizontal' className='w-full h-0.5 bg-neutral-400' />
+                <Seperator.Root orientation='horizontal' className='w-10/12 h-0.5 bg-neutral-400' />
 
 
                 <div className='flex flex-col items-center px-6 py-20'>
@@ -47,7 +47,7 @@ function Experience({ scrollTo }) {
                                 <h3 className='font-mono text-lg font-medium'>Indiana University</h3>
                             </div>
                             <div>
-                                <ul className='list-disc list-inside'>
+                                <ul className='px-5 list-disc'>
                                     <li className='my-3'>Created an interface for Physicians to use in order to view patient recordsd and compare them to medical guidelines.</li>
                                     <li className='my-3'>Developed an API to retrieve data from MongoDB, dynamically parse it, and display it to the user.</li>
                                     <li className='my-3'>Experimented with Natural Language Processing. Tools used were BioBERT and Spacy (SciSpacy, NegSpacy)</li>

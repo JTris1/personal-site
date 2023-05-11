@@ -67,7 +67,7 @@ function Home({ scrolled, scrollTo }) {
                             </div> : <></>
                     }
 
-                    <div className='absolute -translate-x-1/2 bottom-10 w-fit left-1/2' onClick={() => scrollTo('#about')}>
+                    <div className='absolute -translate-x-1/2 bottom-20 w-fit left-1/2' onClick={() => scrollTo('#about')}>
                         <Expand className={`dark:fill-neutral-50 animate-twBounce animate-infinite transition-opacity cursor-pointer ${scrolled ? `opacity-0 pointer-events-none` : undefined}`} />
                     </div>
                 </div>

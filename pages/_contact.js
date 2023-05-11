@@ -75,7 +75,7 @@ function Contact({ }) {
                                     <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter your name</span></Form.Message>
                                 </div>
                                 <Form.Control asChild>
-                                    <input type='text' className='w-full p-3 rounded-md h-9 dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' required />
+                                    <input type='text' className='w-full p-3 rounded-md h-9 bg-neutral-200 ring-2 ring-neutral-400 dark:bg-neutral-800 ring-opacity-40' required />
                                 </Form.Control>
                             </Form.Field>
                             <Form.Field name='email' className='mb-5'>
@@ -85,7 +85,7 @@ function Contact({ }) {
                                     <Form.Message match={'typeMismatch'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter a valid email</span></Form.Message>
                                 </div>
                                 <Form.Control asChild>
-                                    <input type='email' className='w-full p-3 rounded-md h-9 dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' required />
+                                    <input type='email' className='w-full p-3 rounded-md h-9 bg-neutral-200 ring-2 ring-neutral-400 dark:bg-neutral-800 dark:ring-2 ring-opacity-40' required />
                                 </Form.Control>
                             </Form.Field>
                             <Form.Field name='message' className='mb-5'>
@@ -94,7 +94,7 @@ function Contact({ }) {
                                     <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter a message</span></Form.Message>
                                 </div>
                                 <Form.Control asChild>
-                                    <textarea required className='w-full h-32 p-3 rounded-md dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' />
+                                    <textarea required className='w-full h-32 p-3 rounded-md bg-neutral-200 ring-2 ring-neutral-400 dark:bg-neutral-800 dark:ring-2 ring-opacity-40' />
                                 </Form.Control>
                             </Form.Field>
                             <Form.Submit asChild>
