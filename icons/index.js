@@ -15,3 +15,5 @@ export { default as Tailwind } from "./Tailwind";
 export { default as Terminal } from "./Terminal";
 export { default as ErrorCircle } from "./ErrorCircle";
 export { default as Copy } from "./Copy";
+export { default as Close } from "./Close";
+export { default as Check } from "./Check";

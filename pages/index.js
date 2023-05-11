@@ -5,12 +5,13 @@ import Experience from './_experience';
 import Contact from './_contact';
 import Expand from '~/icons/Expand';
 import Notification from '~/components/Notification';
+import { ErrorCircle } from '~/icons';
 
 
 export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, setLinks }) {
   return (
     <main className={`flex flex-col min-h-screen justify-between`}>
-      <Notification />
+      <Notification text={'This site is functional, but it is undergoing some overhauls!'} icon={<ErrorCircle className={`fill-amber-500 text-2xl`} />} duration={4000} position={'top-left'} />
       <div className='w-full'>
         <Home scrolled={scrolled} scrollTo={scrollTo} resetScroll={resetScroll} />
         <About />

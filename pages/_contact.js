@@ -1,12 +1,44 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PortfolioDivider from '~/components/PortfolioDivider'
 import * as Form from '@radix-ui/react-form';
 import * as Tooltip from '@radix-ui/react-tooltip';
-import { Copy, Envelope, ErrorCircle } from '~/icons'
+import { Check, Copy, Envelope, ErrorCircle, Close } from '~/icons'
 import Link from 'next/link';
 import styles from '~/styles/Contact.module.css';
+import axios from 'axios';
+import { ToastBar, Toaster, toast } from 'react-hot-toast';
+import Notification from '~/components/Notification';
 
 function Contact({ }) {
+    const [messageSent, setMessageSent] = useState(null);
+
+    useEffect(() => {
+        if (messageSent === true || messageSent === false) {
+            if (messageSent) {
+                toast('Your message was sent successfully! You should hear back from me shortly.', {
+                    duration: 5000,
+                    icon: <Check className={`fill-green-500 text-2xl`} />,
+                    position: 'bottom-center',
+                    id: 'message_success'
+                });
+            }
+            else if (messageSent === false) {
+                toast("Your message couldn't be delivered for some reason. Please try again later.", {
+                    duration: 5000,
+                    icon: <ErrorCircle className={`fill-amber-500 text-2xl`} />,
+                    position: 'bottom-center',
+                    id: 'message_success'
+                });
+            }
+
+
+            setTimeout(() => {
+                setMessageSent(null);
+            }, 3000)
+        }
+
+    }, [messageSent])
+
     async function copyToClipboard(text) {
         try {
             await navigator.clipboard.writeText(text);
@@ -17,14 +49,50 @@ function Contact({ }) {
         }
     }
 
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        const formdata = { name: e.target['0'].value, email: e.target['1'].value, message: e.target['2'].value }
+
+        const res = await fetch('/api/email', {
+            body: JSON.stringify(formdata),
+            headers: {
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+        });
+
+        const { error } = await res.json();
+        if (error) {
+            console.error(error);
+            setMessageSent(false);
+            return;
+        }
+        else {
+            setMessageSent(true);
+        }
+    }
 
     return (
         <div id='contact' className='bg-neutral-300 dark:bg-neutral-900'>
+            <Toaster toastOptions={{ id: 'message_success' }}>
+                {(t) => (
+                    <ToastBar toast={t}>
+                        {({ icon, message }) => (
+                            <div className='flex'>
+                                <span className='self-center'>{icon}</span>
+                                <span className='font-sans text-sm'>{message}</span>
+                                <button className='h-fit text-3xl self-center' onClick={() => toast.dismiss(t.id)}><Close /></button>
+                            </div>
+                        )}
+                    </ToastBar>
+                )}
+            </Toaster>
             <PortfolioDivider />
             <div className='bg-neutral-300 dark:bg-neutral-900 flex flex-col items-center py-20 px-6'>
                 <h1 className='font-bold text-3xl mb-20'>Contact Me</h1>
                 <div className='flex flex-col items-center'>
-                    <Form.Root className='w-80 flex flex-col'>
+                    <Form.Root className='w-80 flex flex-col' onSubmit={(e) => handleSubmit(e)}>
                         <Form.Field name='name' className='mb-5'>
                             <div className='mb-2 flex flex-col'>
                                 <Form.Label>Name</Form.Label>
@@ -69,7 +137,7 @@ function Contact({ }) {
                             </Link>
 
 
-                            <Tooltip.Provider>
+                            <Tooltip.Provider delayDuration={300}>
                                 <Tooltip.Root>
                                     <Tooltip.Trigger asChild>
                                         <button onClick={() => copyToClipboard('johnathontrisler@gmail.com')}>

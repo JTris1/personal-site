@@ -30,10 +30,10 @@ function Home({ scrolled, scrollTo }) {
 
                     <div className={`flex justify-center mt-12 [transition:opacity_1500ms_ease] ${typewriterStoped ? `opacity-100` : `opacity-0`}`}>
                         <Link href={'https://github.com/JTris1'}>
-                            <GitHub className={'mr-6 scale-125'} />
+                            <GitHub className={'mx-4 scale-125'} />
                         </Link>
                         <Link href={'https://www.linkedin.com/in/johnathon-trisler-79760a231/'}>
-                            <LinkedIn className={'mr-6 scale-125'} />
+                            <LinkedIn className={'mx-4 scale-125'} />
                         </Link>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ function Home({ scrolled, scrollTo }) {
                 }
 
                 <div className='w-fit absolute bottom-0 left-1/2 -translate-x-1/2' onClick={() => scrollTo('#about')}>
-                    <Expand className={`animate-bounce transition-opacity cursor-pointer ${scrolled ? `opacity-0` : undefined}`} />
+                    <Expand className={`animate-bounce transition-opacity cursor-pointer ${scrolled ? `opacity-0 pointer-events-none` : undefined}`} />
                 </div>
             </div>
         </div>
