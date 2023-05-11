@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Home from './_home';
 import About from './_about';
 import Experience from './_experience';
@@ -10,6 +10,7 @@ import Notification from '~/components/Notification';
 import SpaceDivider from '~/components/SpaceDivider';
 import AboutDivider from '~/components/AboutDivider';
 import PortfolioDivider from '~/components/PortfolioDivider';
+import Head from 'next/head';
 
 
 export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, setLinks }) {
@@ -20,6 +21,9 @@ export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, s
 
   return (
     <>
+      <Head>
+        <title>Johnathon Trisler</title>
+      </Head>
       <Toaster toastOptions={{ className: 'toaster' }}>
         {(t) => (
           <ToastBar toast={t}>

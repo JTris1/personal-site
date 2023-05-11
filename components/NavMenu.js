@@ -1,4 +1,3 @@
-// import Link from 'next/link'
 import { Link } from 'react-scroll'
 import { useRouter } from 'next/router'
 import React from 'react'

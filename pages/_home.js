@@ -72,7 +72,6 @@ function Home({ scrolled, scrollTo }) {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
