@@ -63,71 +63,72 @@ function Contact({ }) {
     }
 
     return (
-        <div id='contact' className='bg-neutral-300 dark:bg-neutral-900'>
-            <PortfolioDivider />
-            <div className='flex flex-col items-center px-6 py-20 bg-neutral-300 dark:bg-neutral-900'>
-                <h1 className='mb-20 text-3xl font-bold'>Contact Me</h1>
-                <div className='flex flex-col items-center'>
-                    <Form.Root className='flex flex-col w-80' onSubmit={(e) => handleSubmit(e)}>
-                        <Form.Field name='name' className='mb-5'>
-                            <div className='flex flex-col mb-2'>
-                                <Form.Label>Name</Form.Label>
-                                <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter your name</span></Form.Message>
-                            </div>
-                            <Form.Control asChild>
-                                <input type='text' className='w-full p-3 rounded-md h-9 dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' required />
-                            </Form.Control>
-                        </Form.Field>
-                        <Form.Field name='email' className='mb-5'>
-                            <div className='flex flex-col mb-2'>
-                                <Form.Label className='mb-2'>Email</Form.Label>
-                                <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter your email</span></Form.Message>
-                                <Form.Message match={'typeMismatch'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter a valid email</span></Form.Message>
-                            </div>
-                            <Form.Control asChild>
-                                <input type='email' className='w-full p-3 rounded-md h-9 dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' required />
-                            </Form.Control>
-                        </Form.Field>
-                        <Form.Field name='message' className='mb-5'>
-                            <div className='flex flex-col mb-2'>
-                                <Form.Label className='mb-2'>Message</Form.Label>
-                                <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter a message</span></Form.Message>
-                            </div>
-                            <Form.Control asChild>
-                                <textarea required className='w-full h-32 p-3 rounded-md dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' />
-                            </Form.Control>
-                        </Form.Field>
-                        <Form.Submit asChild>
-                            <button className='self-end p-3 font-sans font-bold text-white bg-blue-500 w-fit rounded-xl'>
-                                Send Message
-                            </button>
-                        </Form.Submit>
-                    </Form.Root>
+        <div id='contact' className='flex flex-col items-center w-screen bg-neutral-300 dark:bg-neutral-900'>
+            <div className='max-w-screen-xl'>
+                <div className='flex flex-col items-center px-6 py-20 bg-neutral-300 dark:bg-neutral-900'>
+                    <h1 className='mb-20 text-3xl font-bold'>Contact Me</h1>
+                    <div className='flex flex-col items-center'>
+                        <Form.Root className='flex flex-col w-80' onSubmit={(e) => handleSubmit(e)}>
+                            <Form.Field name='name' className='mb-5'>
+                                <div className='flex flex-col mb-2'>
+                                    <Form.Label>Name</Form.Label>
+                                    <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter your name</span></Form.Message>
+                                </div>
+                                <Form.Control asChild>
+                                    <input type='text' className='w-full p-3 rounded-md h-9 dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' required />
+                                </Form.Control>
+                            </Form.Field>
+                            <Form.Field name='email' className='mb-5'>
+                                <div className='flex flex-col mb-2'>
+                                    <Form.Label className='mb-2'>Email</Form.Label>
+                                    <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter your email</span></Form.Message>
+                                    <Form.Message match={'typeMismatch'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter a valid email</span></Form.Message>
+                                </div>
+                                <Form.Control asChild>
+                                    <input type='email' className='w-full p-3 rounded-md h-9 dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' required />
+                                </Form.Control>
+                            </Form.Field>
+                            <Form.Field name='message' className='mb-5'>
+                                <div className='flex flex-col mb-2'>
+                                    <Form.Label className='mb-2'>Message</Form.Label>
+                                    <Form.Message match={'valueMissing'} className='mt-2'><span className='inline-flex items-center font-sans text-sm font-bold text-red-500 fill-red-500'><ErrorCircle className={'text-xl mr-2'} />Please enter a message</span></Form.Message>
+                                </div>
+                                <Form.Control asChild>
+                                    <textarea required className='w-full h-32 p-3 rounded-md dark:bg-neutral-800 dark:ring-2 ring-neutral-500 ring-opacity-40' />
+                                </Form.Control>
+                            </Form.Field>
+                            <Form.Submit asChild>
+                                <button className='self-end p-3 font-sans font-bold text-white bg-blue-500 w-fit rounded-xl'>
+                                    Send Message
+                                </button>
+                            </Form.Submit>
+                        </Form.Root>
 
-                    <h2 className='my-16 font-mono font-bold'>or...</h2>
-                    <h3 className='my-5'>Just shoot me an email</h3>
-                    <div className='flex justify-center w-80'>
-                        <div className='flex items-center justify-between w-32'>
-                            <Link href={'mailto:johnathontrisler@gmail.com'}>
-                                <Envelope className={'text-5xl transition cursor-pointer fill-white hover:fill-blue-500 hover:scale-110'} />
-                            </Link>
+                        <h2 className='my-16 font-mono font-bold'>or...</h2>
+                        <h3 className='my-5'>Just shoot me an email</h3>
+                        <div className='flex justify-center w-80'>
+                            <div className='flex items-center justify-between w-32'>
+                                <Link href={'mailto:johnathontrisler@gmail.com'}>
+                                    <Envelope className={'text-5xl transition cursor-pointer fill-white hover:fill-blue-500 hover:scale-110'} />
+                                </Link>
 
 
-                            <Tooltip.Provider delayDuration={300}>
-                                <Tooltip.Root>
-                                    <Tooltip.Trigger asChild>
-                                        <button onClick={() => copyToClipboard('johnathontrisler@gmail.com')}>
-                                            <Copy className={'text-4xl transition cursor-pointer fill-white hover:fill-blue-500 hover:scale-110'} />
-                                        </button>
-                                    </Tooltip.Trigger>
-                                    <Tooltip.Portal>
-                                        <Tooltip.Content className={`${styles.TooltipContent} bg-neutral-50 p-3 rounded-lg transition text-sm`} sideOffset={5} avoidCollisions>
-                                            johnathontrisler@gmail.com
-                                            <Tooltip.TooltipArrow className='fill-neutral-50' />
-                                        </Tooltip.Content>
-                                    </Tooltip.Portal>
-                                </Tooltip.Root>
-                            </Tooltip.Provider>
+                                <Tooltip.Provider delayDuration={300}>
+                                    <Tooltip.Root>
+                                        <Tooltip.Trigger asChild>
+                                            <button onClick={() => copyToClipboard('johnathontrisler@gmail.com')}>
+                                                <Copy className={'text-4xl transition cursor-pointer fill-white hover:fill-blue-500 hover:scale-110'} />
+                                            </button>
+                                        </Tooltip.Trigger>
+                                        <Tooltip.Portal>
+                                            <Tooltip.Content className={`${styles.TooltipContent} bg-neutral-50 p-3 rounded-lg transition text-sm`} sideOffset={5} avoidCollisions>
+                                                johnathontrisler@gmail.com
+                                                <Tooltip.TooltipArrow className='fill-neutral-50' />
+                                            </Tooltip.Content>
+                                        </Tooltip.Portal>
+                                    </Tooltip.Root>
+                                </Tooltip.Provider>
+                            </div>
                         </div>
                     </div>
                 </div>

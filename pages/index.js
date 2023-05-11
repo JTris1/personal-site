@@ -7,6 +7,9 @@ import Expand from '~/icons/Expand';
 import { ErrorCircle, Close } from '~/icons';
 import { Toaster, ToastBar, toast } from 'react-hot-toast';
 import Notification from '~/components/Notification';
+import SpaceDivider from '~/components/SpaceDivider';
+import AboutDivider from '~/components/AboutDivider';
+import PortfolioDivider from '~/components/PortfolioDivider';
 
 
 export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, setLinks }) {
@@ -30,11 +33,18 @@ export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, s
           </ToastBar>
         )}
       </Toaster>
-      <main className={`flex flex-col min-h-screen justify-between`}>
-        <div className='w-full'>
+      <main className={``}>
+        <div className='flex flex-col items-center w-full'>
           <Home scrolled={scrolled} scrollTo={scrollTo} resetScroll={resetScroll} />
+          <SpaceDivider width={'100%'} />
           <About />
+          <div className='w-screen bg-neutral-200 dark:bg-neutral-900'>
+            <AboutDivider />
+          </div>
           <Experience scrollTo={scrollTo} />
+          <div className='w-screen bg-neutral-300 dark:bg-neutral-900'>
+            <PortfolioDivider />
+          </div>
           <Contact />
         </div>
         <div className={`transition-opacity opacity-0 fixed bottom-3 right-3 bg-blue-500 rounded-xl fill-white cursor-pointer ${scrolled ? `opacity-100` : `pointer-events-none`}`} onClick={() => resetScroll()}>

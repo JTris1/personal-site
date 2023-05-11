@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
           font-family: ${jbMono.style.fontFamily}
         }
       `}</style>
-      <main className={`${jbMono.variable} ${inter.variable} font-mono h-full overflow-hidden relative`}>
+      <main className={`${jbMono.variable} ${inter.variable} font-mono overflow-hidden relative`}>
         <Nav />
         <Component {...pageProps} scrolled={scrolled} resetScroll={resetScroll} scrollTo={scrollTo} />
       </main>

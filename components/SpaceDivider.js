@@ -3,10 +3,13 @@ import { useEffect } from 'react'
 function SpaceDivider({ width, height, color, darkColor }) {
     /** Divider that uses a space ship. Must specify a width at minimum. If no height is supplied, it is calculated based on a scale of 4.5 (ex. width = 1440, height = (1440/4.5)) */
     return (
-        <svg width={width} viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" className='-my-[1px]'>
             <g clipPath="url(#clip0_1_4)">
                 <path d="M0 160L80 176C160 192 320 224 480 197.3C640 171 800 85 960 64C1120 43 1280 85 1360 106.7L1440 128V320H0V160Z" className={'fill-neutral-200 dark:fill-neutral-900'} />
-                <g clipPath="url(#clip1_1_4)" className={`animate-divider-on-scroll [animation-play-state:paused] [animation-delay:calc(var(--scroll)*-1s)]`}>
+                <g clipPath="url(#clip1_1_4)" className={`animate-divider-on-scroll [animation-play-state:paused] [animation-delay:calc(var(--scroll)*-1s)] 
+                    md:animate-divider-on-scroll-small md:[animation-play-state:paused] md:[animation-delay:calc(var(--scroll)*-1s)]
+                    3xl:animate-divider-on-scroll-x-small 3xl:[animation-play-state:paused] 3xl:[animation-delay:calc(var(--scroll)*-1s)]
+                    `}>
                     <path d="M31.9404 195.901L35.6301 192.13L73.0411 199.108L74.1658 203.776L31.9404 195.901Z" fill="#939698" />
                     <path d="M73.4939 200.665L34.5002 193.392L31.9404 195.901L74.1658 203.776L73.4939 200.665Z" fill="#575A5B" />
                     <path d="M28.9389 211.993L29.8777 215.223L49.1751 218.822L50.7232 216.056L28.9389 211.993Z" fill="#939698" />
