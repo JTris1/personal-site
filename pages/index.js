@@ -16,7 +16,7 @@ export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, s
   }, [])
 
   return (
-    <main className={`flex flex-col min-h-screen justify-between`}>
+    <>
       <Toaster toastOptions={{ className: 'toaster' }}>
         {(t) => (
           <ToastBar toast={t}>
@@ -30,16 +30,17 @@ export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, s
           </ToastBar>
         )}
       </Toaster>
-
-      <div className='w-full'>
-        <Home scrolled={scrolled} scrollTo={scrollTo} resetScroll={resetScroll} />
-        <About />
-        <Experience scrollTo={scrollTo} />
-        <Contact />
-      </div>
-      <div className={`transition-opacity opacity-0 fixed bottom-3 right-3 bg-blue-500 rounded-xl fill-white cursor-pointer ${scrolled ? `opacity-100` : `pointer-events-none`}`} onClick={() => resetScroll()}>
-        <Expand className={`rotate-180 scale-75`} />
-      </div>
-    </main>
+      <main className={`flex flex-col min-h-screen justify-between`}>
+        <div className='w-full'>
+          <Home scrolled={scrolled} scrollTo={scrollTo} resetScroll={resetScroll} />
+          <About />
+          <Experience scrollTo={scrollTo} />
+          <Contact />
+        </div>
+        <div className={`transition-opacity opacity-0 fixed bottom-3 right-3 bg-blue-500 rounded-xl fill-white cursor-pointer ${scrolled ? `opacity-100` : `pointer-events-none`}`} onClick={() => resetScroll()}>
+          <Expand className={`rotate-180 scale-75`} />
+        </div>
+      </main>
+    </>
   )
 }

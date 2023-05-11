@@ -1,8 +1,9 @@
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import { neutral } from 'tailwindcss/colors'
+import { withAnimations } from 'animated-tailwindcss'
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = withAnimations({
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -42,7 +43,7 @@ module.exports = {
         'slide-in': {
           'from': { transform: 'translateX(100vw)' },
           'to': { transform: 'translateX(0vw)' }
-        }
+        },
       },
       colors: {
         neutral: neutral
@@ -50,4 +51,4 @@ module.exports = {
     },
     plugins: [],
   }
-}
+})
