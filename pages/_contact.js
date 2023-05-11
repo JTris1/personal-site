@@ -5,9 +5,7 @@ import * as Tooltip from '@radix-ui/react-tooltip';
 import { Check, Copy, Envelope, ErrorCircle, Close } from '~/icons'
 import Link from 'next/link';
 import styles from '~/styles/Contact.module.css';
-import axios from 'axios';
 import { ToastBar, Toaster, toast } from 'react-hot-toast';
-import Notification from '~/components/Notification';
 
 function Contact({ }) {
     const [messageSent, setMessageSent] = useState(null);

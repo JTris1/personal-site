@@ -4,14 +4,37 @@ import About from './_about';
 import Experience from './_experience';
 import Contact from './_contact';
 import Expand from '~/icons/Expand';
-import Notification from '~/components/Notification';
-import { ErrorCircle } from '~/icons';
+import { ErrorCircle, Close } from '~/icons';
+import { Toaster, ToastBar, toast } from 'react-hot-toast';
 
 
 export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, setLinks }) {
+
+  useEffect(() => {
+    toast('This site is functional, but it is undergoing some overhauls!', {
+      duration: 4000,
+      icon: <ErrorCircle className={`fill-amber-500 text-2xl`} />,
+      position: 'top-left',
+      id: 'renovations'
+    })
+  }, [])
+
   return (
     <main className={`flex flex-col min-h-screen justify-between`}>
-      <Notification text={'This site is functional, but it is undergoing some overhauls!'} icon={<ErrorCircle className={`fill-amber-500 text-2xl`} />} duration={4000} position={'top-left'} />
+      <Toaster toastOptions={{ id: 'renovations' }}>
+        {(t) => (
+          <ToastBar toast={t}>
+            {({ icon, message }) => (
+              <div className='flex'>
+                <span className='self-center'>{icon}</span>
+                <span className='font-sans text-sm'>{message}</span>
+                <button className='h-fit text-3xl self-center' onClick={() => toast.dismiss(t.id)}><Close /></button>
+              </div>
+            )}
+          </ToastBar>
+        )}
+      </Toaster>
+
       <div className='w-full'>
         <Home scrolled={scrolled} scrollTo={scrollTo} resetScroll={resetScroll} />
         <About />
