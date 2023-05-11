@@ -21,9 +21,9 @@ function Experience({ scrollTo }) {
                             </div>
                             <div>
                                 <ul className='px-5 list-disc'>
-                                    <li className='my-3'>Learned all about differnet forms of technology, like databases, cybersecurity, networking, and web development.</li>
-                                    <li className='my-3'>Gained exposure and experience with many different languages, such as Java, Python, Kotlin, and more.</li>
-                                    <li className='my-3'>Learned useful career skills, including Project Management, Statistics, UI/UX, and more.</li>
+                                    <li className='my-3'>Learned all about different forms of technology such as: Databases, CyberSecurity, Networking, and Web Development.</li>
+                                    <li className='my-3'>Gained exposure and experience with many different languages such as: Java, Python, Kotlin, and more.</li>
+                                    <li className='my-3'>Learned useful career skills, including: Project Management, Statistics, UI/UX Design and Development, and more.</li>
                                 </ul>
                             </div>
                         </section>
