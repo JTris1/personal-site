@@ -9,7 +9,7 @@ function Home({ scrolled, scrollTo }) {
     const [typewriterStoped, setTypewriterStopped] = useState(false);
 
     return (
-        <div id="home" className='relative flex flex-col items-center justify-center w-screen min-h-screen p-8'>
+        <div className='relative flex flex-col items-center justify-center w-screen min-h-screen p-8'>
             <div className='max-w-screen-xl'>
                 <div className={`text-2xl w-full flex flex-col items-center justify-center`}>
                     <div className='mb-40 text-center'>

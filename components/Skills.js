@@ -9,7 +9,7 @@ function Skills({ title, img, labels, className, children }) {
             <div className='flex flex-wrap justify-center'>
                 {labels.map((l) => (
                     <Label key={l.name} className={'group flex'}>
-                        <p className='mr-2 transition translate-x-3 group-hover:translate-x-0 group-hover:font-bold group-hover:text-blue-500'>{l.name}</p>
+                        <p className='mr-2 transition translate-x-3 group-hover:translate-x-0'>{l.name}</p>
                         {l.img}
                     </Label>
                 ))}

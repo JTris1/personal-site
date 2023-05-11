@@ -22,7 +22,7 @@ function NavMenu({ innerRef, setNavOpened }) {
                     activeClass={`font-bold`}
                     smooth
                     duration={350}
-                    offset={30}
+                    // offset={30}
                     spy
                     to='about'
                 >
@@ -32,7 +32,7 @@ function NavMenu({ innerRef, setNavOpened }) {
                     activeClass={`font-bold`}
                     smooth
                     duration={350}
-                    offset={30}
+                    // offset={30}
                     spy
                     to='experience'
                 >
@@ -42,7 +42,7 @@ function NavMenu({ innerRef, setNavOpened }) {
                     activeClass={`font-bold`}
                     smooth
                     duration={350}
-                    offset={30}
+                    // offset={30}
                     spy
                     to='contact'
                 >

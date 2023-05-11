@@ -63,10 +63,10 @@ function Contact({ }) {
     }
 
     return (
-        <div id='contact' className='flex flex-col items-center w-screen bg-neutral-300 dark:bg-neutral-900'>
+        <div className='flex flex-col items-center w-screen min-h-screen bg-neutral-300 dark:bg-neutral-900'>
             <div className='max-w-screen-xl'>
                 <div className='flex flex-col items-center px-6 py-20 bg-neutral-300 dark:bg-neutral-900'>
-                    <h1 className='mb-20 text-3xl font-bold'>Contact Me</h1>
+                    <h1 className='mb-20 text-4xl font-bold'>Contact Me</h1>
                     <div className='flex flex-col items-center'>
                         <Form.Root className='flex flex-col w-80' onSubmit={(e) => handleSubmit(e)}>
                             <Form.Field name='name' className='mb-5'>

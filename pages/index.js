@@ -39,17 +39,25 @@ export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, s
       </Toaster>
       <main className={``}>
         <div className='flex flex-col items-center w-full'>
-          <Home scrolled={scrolled} scrollTo={scrollTo} resetScroll={resetScroll} />
-          <SpaceDivider width={'100%'} />
-          <About />
-          <div className='w-screen bg-neutral-200 dark:bg-neutral-900'>
-            <AboutDivider />
+          <div id="home">
+            <Home scrolled={scrolled} scrollTo={scrollTo} resetScroll={resetScroll} />
+            <SpaceDivider width={'100%'} />
           </div>
-          <Experience scrollTo={scrollTo} />
-          <div className='w-screen bg-neutral-300 dark:bg-neutral-900'>
-            <PortfolioDivider />
+          <div id="about">
+            <About />
+            <div className='w-screen bg-neutral-200 dark:bg-neutral-900'>
+              <AboutDivider />
+            </div>
           </div>
-          <Contact />
+          <div id="experience">
+            <Experience scrollTo={scrollTo} />
+            <div className='w-screen bg-neutral-300 dark:bg-neutral-900'>
+              <PortfolioDivider />
+            </div>
+          </div>
+          <div id="contact">
+            <Contact />
+          </div>
         </div>
         <div className={`transition-opacity opacity-0 fixed bottom-3 right-3 bg-blue-500 rounded-xl fill-white cursor-pointer ${scrolled ? `opacity-100` : `pointer-events-none`}`} onClick={() => resetScroll()}>
           <Expand className={`rotate-180 scale-75`} />
