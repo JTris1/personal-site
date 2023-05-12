@@ -17,5 +17,5 @@ jobs:
             docker stop website
             docker remove website
           fi
-          docker run -p=3000:3000 --restart=always --name website personal-site
+          docker run -d -p=3000:3000 --restart=always --name website personal-site
     
