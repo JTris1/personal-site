@@ -1,0 +1,17 @@
+name: Docker Builds
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: docker build
+        run: |
+          docker build . -t personal-site
+      - name: docker run
+        run: |
+          docker run personal-site -p3000:3000 --restart=always
+    
