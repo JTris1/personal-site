@@ -13,9 +13,9 @@ jobs:
           docker build . -t personal-site
       - name: docker run
         run: |
-          if [ $( docker ps -a | grep personal-site | wc -l ) -gt 0 ]; then
-            docker stop personal-site
-            docker remove personal-site
+          if [ $( docker ps -a | grep website | wc -l ) -gt 0 ]; then
+            docker stop website
+            docker remove website
           fi
-          docker run -p=3000:3000 --restart=always personal-site
+          docker run -p=3000:3000 --restart=always --name website personal-site
     
