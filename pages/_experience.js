@@ -39,7 +39,7 @@ function Experience({ scrollTo }) {
                     <div className='flex flex-col self-start' >
                         <section className='w-full my-20'>
                             <div className='flex items-center justify-between w-full mb-2'>
-                                <h2 className='w-2/3 font-mono text-2xl font-bold'>Health Preventative Care Researcher</h2>
+                                <h2 className='w-2/3 font-mono text-2xl font-bold'>Preventive Health Care Researcher</h2>
                                 <TextLabel className={'bg-green-100 text-green-700'}>Part Time</TextLabel>
                             </div>
                             <div className='mb-6'>

@@ -15,7 +15,7 @@ function About({ }) {
                     <div className='flex flex-col items-center min-h-screen px-6 py-20 bg-neutral-200 dark:bg-neutral-900'>
                         <h1 className='font-sans text-4xl font-bold'>About Me</h1>
                         <Image alt={'Johnathon Trisler'} src={'/me.jpg'} width={425} height={425} className='rounded-full scale-50 transition-transform hover:scale-[55%]' />
-                        <p className='mb-10'>{"Front-end Developer and INSERT SOMETHING MAYBE GOOFY HERE. I specialize in frontend development with a current focus of React. I have experience with a wide variety of technologies, including many different languages. I'm an adaptable team player with great indepedent skills, and a desire to succeed."}</p>
+                        <p className='mb-10'>{"Front-end Developer and your average nerd. I specialize in frontend development with a current focus of React. I have experience with a wide variety of technologies, including many different languages. I'm an adaptable team player with great indepedent skills, and a desire to succeed."}</p>
 
                         <div className='flex flex-col items-center my-20'>
                             <h2 className='font-sans text-2xl font-bold underline underline-offset-4'>Development Skills</h2>
@@ -40,10 +40,10 @@ function About({ }) {
 
                         <h2 className='m-10 font-sans text-2xl font-bold underline underline-offset-4'>Fun Stuff</h2>
                         <div>
-                            <p className='mb-2'>I spend my free time scrolling through memes, listening to music, playing video games, or watching a good movie or series.</p>
-                            <p className='mb-2'>For music, I am very particular about what I like. But, in general, my go-to genres are Rap and EDM.</p>
-                            <p className='mb-2'>My favorite video games are Counter Strike, The Witcher 3, Stray, and Spider-Man (PS4) just to name a few.</p>
-                            <p className='mb-2'>Lastly, my favorite movie franchises are Star Wars, James Bond, and Marvel (before phase 4).</p>
+                            <p className='mb-6'>I spend my free time expanding my knowledge of technology, listening to music, playing video games, or watching a good movie or series.</p>
+                            <p className='mb-6'>For music, I am very particular about what I like. But, in general, my go-to genres are Rap and EDM.</p>
+                            <p className='mb-6'>My favorite video games are Counter Strike, The Witcher 3, and Spider-Man (PS4) just to name a few.</p>
+                            <p className='mb-6'>Lastly, my favorite movie franchises are Star Wars, James Bond, and Marvel (before phase 4).</p>
                         </div>
                     </div>
                 </div>
