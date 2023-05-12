@@ -23,6 +23,7 @@ export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, s
     <>
       <Head>
         <title>Johnathon Trisler</title>
+        <meta name='description' content="Johnathon Trisler's Personal Website"></meta>
       </Head>
       <Toaster toastOptions={{ className: 'toaster' }}>
         {(t) => (
@@ -31,7 +32,7 @@ export default function Layout({ refs, scrolled, resetScroll, scrollTo, links, s
               <div className='flex'>
                 <span className='self-center'>{icon}</span>
                 <span className='font-sans text-sm'>{message}</span>
-                <button className='self-center text-3xl h-fit' onClick={() => toast.dismiss(t.id)}><Close /></button>
+                <button className='self-center text-3xl h-fit' onClick={() => toast.dismiss(t.id)} aria-label='Close notification'><Close /></button>
               </div>
             )}
           </ToastBar>

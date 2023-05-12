@@ -30,10 +30,10 @@ function Home({ scrolled, scrollTo }) {
 
 
                         <div className={`flex justify-center mt-12 [transition:opacity_1500ms_ease] ${typewriterStoped ? `opacity-100` : `opacity-0`}`}>
-                            <Link href={'https://github.com/JTris1'}>
+                            <Link href={'https://github.com/JTris1'} aria-label="Johnathon's GitHub profile">
                                 <GitHub className={'mx-4 scale-125'} />
                             </Link>
-                            <Link href={'https://www.linkedin.com/in/johnathon-trisler-79760a231/'}>
+                            <Link href={'https://www.linkedin.com/in/johnathon-trisler-79760a231/'} aria-label="Johnathon's LinkedIn profile">
                                 <LinkedIn className={'mx-4 scale-125'} />
                             </Link>
                         </div>

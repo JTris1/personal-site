@@ -98,7 +98,7 @@ function Contact({ }) {
                                 </Form.Control>
                             </Form.Field>
                             <Form.Submit asChild>
-                                <button className='self-end p-3 font-sans font-bold text-white bg-blue-500 w-fit rounded-xl'>
+                                <button className='self-end p-3 font-sans font-bold text-white bg-blue-600 w-fit rounded-xl' aria-label='Send message'>
                                     Send Message
                                 </button>
                             </Form.Submit>
@@ -108,7 +108,7 @@ function Contact({ }) {
                         <h3 className='my-5'>Just shoot me an email</h3>
                         <div className='flex justify-center w-80'>
                             <div className='flex items-center justify-between w-32'>
-                                <Link href={'mailto:johnathontrisler@gmail.com'}>
+                                <Link href={'mailto:johnathontrisler@gmail.com'} aria-label='Send an email to me with the default email client'>
                                     <Envelope className={'text-5xl transition cursor-pointer fill-white hover:fill-blue-500 hover:scale-110'} />
                                 </Link>
 
@@ -116,7 +116,7 @@ function Contact({ }) {
                                 <Tooltip.Provider delayDuration={300}>
                                     <Tooltip.Root>
                                         <Tooltip.Trigger asChild>
-                                            <button onClick={() => copyToClipboard('johnathontrisler@gmail.com')}>
+                                            <button onClick={() => copyToClipboard('johnathontrisler@gmail.com')} aria-label='Copy email address'>
                                                 <Copy className={'text-4xl transition cursor-pointer fill-white hover:fill-blue-500 hover:scale-110'} />
                                             </button>
                                         </Tooltip.Trigger>

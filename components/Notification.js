@@ -17,6 +17,7 @@ function Notification({ text, duration, id, position, icon }) {
                 <div className="flex">
                     <button
                         onClick={() => toast.dismiss(t.id)}
+                        aria-label='Close notification'
                     >
                         <Close className={`text-3xl dark:fill-neutral-50`} />
                     </button>

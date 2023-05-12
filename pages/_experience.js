@@ -59,7 +59,7 @@ function Experience({ scrollTo }) {
                                 <h2 className='font-mono font-extrabold'>...and hopefully you!</h2>
                             </div>
                             <p className=''>{`If you are a recruiter and you want to get in contact for any reason, please do! I'd love to chat, no matter the topic.`}</p>
-                            <button className='p-3 my-10 font-sans font-bold text-white bg-blue-500 rounded-xl' onClick={() => scrollTo('#contact')}>Contact Me!</button>
+                            <button className='p-3 my-10 font-sans font-bold text-white bg-blue-600 rounded-xl' onClick={() => scrollTo('#contact')} aria-label='Scroll to the "Contact" section to contact me' >Contact Me!</button>
                         </section>
                     </div>
                 </div>

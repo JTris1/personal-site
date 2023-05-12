@@ -11,7 +11,7 @@ export default function Nav({ refProp, resetScroll, scrollTo, activeLink, setAct
         <>
             <div ref={refProp} className='fixed z-30 flex items-center justify-between w-full h-16 backdrop-blur-md'>
                 <div className='w-[100px] h-[100px]'></div>
-                <button className={`${styles['hamburger']} ${styles['hamburger--squeeze']} ${navOpened ? styles['is-active'] : ``}`} type='button' onClick={() => setNavOpened(!navOpened)}>
+                <button className={`${styles['hamburger']} ${styles['hamburger--squeeze']} ${navOpened ? styles['is-active'] : ``}`} type='button' onClick={() => setNavOpened(!navOpened)} aria-label='Open navigation menu'>
                     <span className={`${styles['hamburger-box']}`}>
                         <span className={`${styles['hamburger-inner']}`}></span>
                     </span>

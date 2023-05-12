@@ -10,6 +10,7 @@
     "svgr": "svgr --icon --ignore-existing --title-prop --replace-attr-values '#000000=currentColor' -d icons/svg icons"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^13.4.2",
     "@radix-ui/react-form": "0.0.2",
     "@radix-ui/react-popover": "1.0.5",
     "@radix-ui/react-separator": "^1.0.2",
