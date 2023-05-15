@@ -48,7 +48,7 @@ function Experience({ scrollTo }) {
                             </div>
                             <div>
                                 <ul className='px-5 list-disc'>
-                                    <li className='my-3'>Created an interface for Physicians to use in order to view patient recordsd and compare them to medical guidelines.</li>
+                                    <li className='my-3'>Created an interface for Physicians to use in order to view patient records and compare them to medical guidelines.</li>
                                     <li className='my-3'>Developed an API to retrieve data from MongoDB, dynamically parse it, and display it to the user.</li>
                                     <li className='my-3'>Experimented with Natural Language Processing. Tools used were BioBERT and Spacy (SciSpacy, NegSpacy)</li>
                                 </ul>

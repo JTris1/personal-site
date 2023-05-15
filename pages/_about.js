@@ -40,7 +40,7 @@ function About({ }) {
 
                         <h2 className='m-10 font-sans text-2xl font-bold underline underline-offset-4'>Fun Stuff</h2>
                         <div>
-                            <p className='mb-6'>I spend my free time expanding my knowledge of technology, listening to music, playing video games, or watching a good movie or series.</p>
+                            <p className='mb-6'>I spend my free time expanding my knowledge of technology, listening to music, playing video games, or watching a good movie/series.</p>
                             <p className='mb-6'>For music, I am very particular about what I like. But, in general, my go-to genres are Rap and EDM.</p>
                             <p className='mb-6'>My favorite video games are Counter Strike, The Witcher 3, and Spider-Man (PS4) just to name a few.</p>
                             <p className='mb-6'>Lastly, my favorite movie franchises are Star Wars, James Bond, and Marvel (before phase 4).</p>
