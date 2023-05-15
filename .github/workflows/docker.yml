@@ -1,0 +1,21 @@
+name: Docker Builds
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: docker build
+        run: |
+          docker build . -t personal-site
+      - name: docker run
+        run: |
+          if [ $( docker ps -a | grep website | wc -l ) -gt 0 ]; then
+            docker stop website
+            docker remove website
+          fi
+          docker run -d -p=3000:3000 --restart=always --name website personal-site
+    
